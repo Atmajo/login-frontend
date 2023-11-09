@@ -21,7 +21,7 @@ export default function Login({ setLoginUser, onLogin }) {
 
     event.preventDefault();
     const {email, password} = form;
-    axios.post("http://localhost:3020/login", form).then((res) => {
+    axios.post("https://login-backend-hdt2.onrender.com/login", form).then((res) => {
       setLoginUser(res.data.name);
       onLogin({email, password});
       navigate('/');
