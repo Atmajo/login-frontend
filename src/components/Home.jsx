@@ -11,7 +11,6 @@ const Home = ({ email }) => {
             <ul className="flex flex-row gap-3 p-1">
               <li><a href="/" className="text-sm hover:text-xl hover:border-purple-400 hover:border-b-2 ">HOME</a></li>
               <li><a href="/" className="text-sm hover:text-xl hover:border-purple-400 hover:border-b-2 ">ABOUT</a></li>
-              <li><a href="/" className="text-sm hover:text-xl hover:border-purple-400 hover:border-b-2 ">CONTACT</a></li>
             </ul>
             <div className="gap-1 border-black rounded-md border-2 p-2 hover:bg-slate-200 hover:border-purple-400">
               <ul>
