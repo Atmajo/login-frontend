@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function Login({ setLoginUser, onLogin }) {
   const navigate = useNavigate();
-
+  let message = "";
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -22,6 +22,7 @@ export default function Login({ setLoginUser, onLogin }) {
     event.preventDefault();
     const {email, password} = form;
     axios.post("https://login-backend-hdt2.onrender.com/login", form).then((res) => {
+      message = res.data.message;
       setLoginUser(res.data.name);
       onLogin({email, password});
       navigate('/');
@@ -104,7 +105,7 @@ export default function Login({ setLoginUser, onLogin }) {
               </button>
             </div>
           </form>
-
+          <div className="mt-10 text-center text-sm text-gray-500">{message}</div>
           <div>
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{" "}
