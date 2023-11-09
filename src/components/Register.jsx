@@ -16,7 +16,7 @@ export default function Register() {
     const { name, email, password } = form;
 
     axios
-      .post("http://localhost:3020/register", { name, email, password })
+      .post("https://login-backend-hdt2.onrender.com/register", { name, email, password })
       .then((res) => {
         console.log(res);
         navigate("/login");
